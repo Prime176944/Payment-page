@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank Transfer Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      color: black;
+      text-align: center;
+      padding: 30px;
+    }
+    .box {
+      border: 2px solid black;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Bank Transfer Details</h2>
+    <p><strong>Account Name:</strong> Your Name</p>
+    <p><strong>IBAN:</strong> DE89370400440532013000</p>
+    <p><strong>BIC:</strong> COBADEFFXXX</p>
+    <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+    <p>Please use the Order ID when making payment.</p>
+  </div>
+
+  <script>
+    const orderId = 'ORD-' + Math.floor(Math.random() * 1000000);
+    document.getElementById("orderId").innerText = orderId;
+  </script>
+</body>
+</html>
