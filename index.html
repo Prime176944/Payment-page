@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bank Transfer Details</title>
   <style>
     body {
-      background-color: #000;
-      color: white;
+      background-color: #121212;
+      color: #ffffff;
       font-family: Arial, sans-serif;
       padding: 20px;
     }
 
     .container {
-      background-color: #111;
-      padding: 20px;
+      background-color: #1e1e1e;
       border-radius: 10px;
+      padding: 20px;
       max-width: 500px;
       margin: auto;
     }
 
     h2 {
+      color: #ffffff;
       text-align: center;
     }
 
-    .order-id {
-      background-color: #222;
-      color: limegreen;
-      padding: 10px;
-      text-align: center;
+    p {
+      font-size: 16px;
+    }
+
+    #orderIdBox {
+      background-color: #2a2a2a;
+      padding: 15px;
+      border-radius: 8px;
+      color: #00ff88;
       font-weight: bold;
+      text-align: center;
       margin-top: 10px;
       font-size: 18px;
-      border-radius: 5px;
-      word-break: break-word;
     }
   </style>
 </head>
@@ -41,11 +45,10 @@
   <div class="container">
     <h2>Bank Transfer Details</h2>
     <p><strong>Account Name:</strong> John Doe</p>
-    <p><strong>IBAN:</strong> DE89 <a href="#">3704 0044 0532 0130</a> 00</p>
+    <p><strong>IBAN:</strong> DE89 3704 0044 0532 0130 00</p>
     <p><strong>BIC:</strong> COBADEFFXXX</p>
-
     <p><strong>Your Unique Order ID:</strong></p>
-    <div id="orderId" class="order-id"></div>
+    <div id="orderIdBox"><span id="orderId">Loading...</span></div>
   </div>
 
   <script>
