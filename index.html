@@ -9,35 +9,37 @@
       background-color: #121212;
       color: #ffffff;
       font-family: Arial, sans-serif;
-      padding: 20px;
+      padding: 30px;
     }
 
     .container {
       background-color: #1e1e1e;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 500px;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 600px;
       margin: auto;
     }
 
     h2 {
       color: #ffffff;
       text-align: center;
+      font-size: 32px;
     }
 
     p {
-      font-size: 16px;
+      font-size: 20px;
+      margin-bottom: 15px;
     }
 
     #orderIdBox {
       background-color: #2a2a2a;
-      padding: 15px;
-      border-radius: 8px;
+      padding: 25px;
+      border-radius: 10px;
       color: #00ff88;
       font-weight: bold;
       text-align: center;
-      margin-top: 10px;
-      font-size: 18px;
+      margin-top: 20px;
+      font-size: 26px;
     }
   </style>
 </head>
@@ -53,7 +55,7 @@
 
   <script>
     function generateOrderId() {
-      const randomStr = Math.random().toString(36).substr(2, 8);
+      const randomStr = Math.random().toString(36).substr(2, 8).toUpperCase();
       return "ORD-" + randomStr;
     }
 
