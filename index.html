@@ -1,156 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Payment Info</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bank Transfer Details</title>
   <style>
     body {
       background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
       padding: 20px;
     }
 
     .container {
       background-color: #111;
-      border-radius: 10px;
-      padding: 30px;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .info {
-      margin-bottom: 20px;
-    }
-
-    .info strong {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 1.1em;
-    }
-
-    .order-id {
-      font-size: 1.3em;
-      font-weight: bold;
-      color: #0f0;
-      background-color: #222;
-      padding: 12px;
-      border-radius: 8px;
-      text-align: center;
-      word-wrap: break-word;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Bank Transfer Details</h1>
-    <div class="info">
-      <strong>Account Name:</strong>
-      <div>John Doe</div>
-    </div>
-    <div class="info">
-      <strong>IBAN:</strong>
-      <div>DE89 3704 0044 0532 0130 00</div>
-    </div>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Payment Info</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
       padding: 20px;
-    }
-
-    .container {
-      background-color: #111;
       border-radius: 10px;
-      padding: 30px;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      max-width: 500px;
+      margin: auto;
     }
 
-    h1 {
+    h2 {
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .info {
-      margin-bottom: 20px;
-    }
-
-    .info strong {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 1.1em;
     }
 
     .order-id {
-      font-size: 1.3em;
-      font-weight: bold;
-      color: #0f0;
       background-color: #222;
-      padding: 12px;
-      border-radius: 8px;
+      color: limegreen;
+      padding: 10px;
       text-align: center;
-      word-wrap: break-word;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      word-break: break-word;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bank Transfer Details</h1>
-    <div class="info">
-      <strong>Account Name:</strong>
-      <div>John Doe</div>
-    </div>
-    <div class="info">
-      <strong>IBAN:</strong>
-      <div>DE89 3704 0044 0532 0130 00</div>
-    </div>
-    <div class="info">
-      <strong>BIC:</strong>
-      <div>COBADEFFXXX</div>
-    </div>
-    <div class="info">
-      <strong>Your Unique Order ID:</strong>
-      <div class="order-id" id="orderId"></div>
-    </div>
+    <h2>Bank Transfer Details</h2>
+    <p><strong>Account Name:</strong> John Doe</p>
+    <p><strong>IBAN:</strong> DE89 <a href="#">3704 0044 0532 0130</a> 00</p>
+    <p><strong>BIC:</strong> COBADEFFXXX</p>
+
+    <p><strong>Your Unique Order ID:</strong></p>
+    <div id="orderId" class="order-id"></div>
   </div>
 
   <script>
-    // Generate a unique order ID
     function generateOrderId() {
-      const timestamp = Date.now().toString(36);
-      const random = Math.random().toString(36).substring(2, 8);
-      return 'ORD-' + timestamp + '-' + random;
+      const randomStr = Math.random().toString(36).substr(2, 8);
+      return "ORD-" + randomStr;
     }
 
     document.getElementById("orderId").innerText = generateOrderId();
   </script>
 </body>
 </html>
-
-    
